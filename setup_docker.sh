@@ -7,6 +7,8 @@ if [ $? -neq 0 ]; then
     echo "Failed to install Docker. Aborting script"
     exit 1
 fi
+# Editing permissions so that docker can work
+sudo usermod -a -G docker $USER
 
 # Install docker-compose
 sudo pip3 install docker-compose
