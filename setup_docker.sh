@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Install Docker
-curl -sSL https://get.docker.com | sh
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 which docker
 if [ $? -neq 0 ]; then
     echo "Failed to install Docker. Aborting script"
